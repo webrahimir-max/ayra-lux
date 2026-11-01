@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AYRA | The Golden Standard</title>
+<meta name="theme-color" content="#2B211C">
+<style>
+@font-face{font-family:Vz;src:url(Vazirmatn-Regular.woff2) format('woff2');font-weight:400}
+@font-face{font-family:Vz;src:url(Vazirmatn-Medium.woff2) format('woff2');font-weight:500}
+@font-face{font-family:Vz;src:url(Vazirmatn-Bold.woff2) format('woff2');font-weight:700}
+@font-face{font-family:Vz;src:url(Vazirmatn-ExtraBold.woff2) format('woff2');font-weight:800}
+@font-face{font-family:Pf;src:url(pf.ttf) format('truetype');font-weight:400 900}
+:root{--ivory:#F6F1EA;--sand:#EDE4D8;--esp:#2B211C;--esp2:#4A3A31;--gold:#B8975A;--gold2:#D9C08E;--mute:#8C7E73;--line:#E2D7C9}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:Vz,Tahoma,sans-serif;background:var(--ivory);color:var(--esp);padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.serif{font-family:Pf,Georgia,serif;direction:ltr}
+.wrap{max-width:1180px;margin:0 auto}
+/* announcement */
+.ann{background:var(--esp);color:var(--gold2);font-size:12.5px;text-align:center;padding:9px 12px;letter-spacing:.2px;display:flex;gap:10px;justify-content:center;align-items:center}
+.ann b{color:#fff;font-weight:700}
+.ann .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(246,241,234,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+.logo{text-align:center;line-height:1}
+.logo .serif{font-size:26px;font-weight:600;letter-spacing:8px;color:var(--esp)}
+.logo small{display:block;font-family:Pf,serif;font-size:8.5px;letter-spacing:3.2px;color:var(--gold);margin-top:4px;direction:ltr}
+.icons{display:flex;gap:14px;align-items:center}
+.icons svg{width:22px;height:22px;stroke:var(--esp);fill:none;stroke-width:1.6}
+.cartb{position:relative}
+.cartb i{position:absolute;top:-6px;left:-8px;background:var(--gold);color:#fff;font-style:normal;font-size:10px;min-width:17px;height:17px;border-radius:9px;display:grid;place-items:center;font-weight:700}
+/* stories */
+.stories{display:flex;gap:16px;overflow-x:auto;padding:16px 18px 14px;scrollbar-width:none}
+.stories::-webkit-scrollbar{display:none}
+.st{flex:0 0 auto;text-align:center;width:74px}
+.st .ring{width:72px;height:72px;border-radius:50%;padding:2.5px;background:conic-gradient(from 200deg,var(--gold),#f3e3bd,var(--gold),#8a6a35,var(--gold))}
+.st .ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:top;border:3px solid var(--ivory)}
+.st span{display:block;font-size:11.5px;margin-top:7px;color:var(--esp2);white-space:nowrap}
+.st.on .ring{background:var(--esp)}
+/* hero */
+.hero{position:relative;height:min(88vh,760px);overflow:hidden;background:#d8cfc4}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transform:scale(1.04);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,33,28,0) 35%,rgba(43,33,28,.78) 100%)}
+.hero .cap{position:absolute;z-index:2;bottom:42px;right:0;left:0;padding:0 24px;color:#fff;text-align:center}
+.hero .eyebrow{font-family:Pf,serif;letter-spacing:5px;font-size:12px;color:var(--gold2);direction:ltr}
+.hero h1{font-family:Pf,serif;font-weight:500;font-size:clamp(44px,11vw,92px);line-height:.95;margin:10px 0 12px;direction:ltr;letter-spacing:1px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero p{font-size:14.5px;opacity:.92;margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;font-size:14px;font-weight:700;letter-spacing:.3px}
+.btn.light{background:#fff;color:var(--esp)}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.dark{background:var(--esp);color:#fff}
+.btn.line{border:1px solid currentColor}
+/* section title */
+.sec{padding:56px 18px 8px}
+.sh{text-align:center;margin-bottom:26px}
+.sh .serif{font-size:13px;letter-spacing:5px;color:var(--gold);display:block}
+.sh h2{font-size:24px;font-weight:800;margin-top:8px}
+.sh p{color:var(--mute);font-size:13.5px;margin-top:8px;line-height:1.9}
+/* spotlight */
+.spot{display:grid;grid-template-columns:1fr;gap:0;margin:0 18px;background:var(--esp);color:#fff;overflow:hidden}
+.spot .ph{position:relative;aspect-ratio:3/4;overflow:hidden}
+.spot .ph img{width:100%;height:100%;object-fit:cover;transition:opacity .6s}
+.spot .ph .sw{position:absolute;bottom:14px;left:14px;display:flex;gap:6px}
+.spot .ph .sw b{width:26px;height:3px;background:rgba(255,255,255,.4)}
+.spot .ph .sw b.on{background:var(--gold2)}
+.spot .tx{padding:28px 24px 30px}
+.spot .tx .serif{color:var(--gold2);letter-spacing:4px;font-size:12px}
+.spot h3{font-size:24px;margin:10px 0 12px;font-weight:800}
+.spot p{color:#d9cfc4;font-size:14px;line-height:2}
+.spot ul{list-style:none;margin:16px 0 22px;display:grid;gap:8px;font-size:13.5px;color:#efe6da}
+.spot li:before{content:"—";color:var(--gold);margin-left:8px}
+@media(min-width:820px){.spot{grid-template-columns:1.05fr 1fr;max-width:1100px;margin:0 auto}.spot .tx{padding:60px 50px;align-self:center}.spot .ph{aspect-ratio:auto;min-height:620px}}
+/* chips + grid */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:0 18px 18px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;padding:9px 18px;border:1px solid var(--line);font-size:13px;background:#fff;color:var(--esp2)}
+.chip.on{background:var(--esp);color:#fff;border-color:var(--esp)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;padding:0 18px}
+@media(min-width:820px){.grid{grid-template-columns:repeat(4,1fr);gap:28px 20px}}
+.card{cursor:pointer}
+.card .im{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--sand)}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.card:hover .im img{transform:scale(1.05)}
+.card .tag{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.92);font-size:10.5px;padding:4px 9px;font-weight:700;color:var(--esp)}
+.card .qa{position:absolute;bottom:10px;left:10px;width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.card .qa svg{width:18px;height:18px;stroke:var(--esp);fill:none;stroke-width:1.8}
+.card h4{font-size:14px;font-weight:700;margin-top:11px}
+.card .m{font-size:11.5px;color:var(--mute);margin-top:4px;line-height:1.7}
+.card .dots{display:flex;gap:5px;margin-top:8px}
+.card .dots i{width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+.card .pr{font-size:12.5px;color:var(--gold);font-weight:700;margin-top:8px}
+/* lookbook */
+.look{display:flex;gap:12px;overflow-x:auto;padding:0 18px 6px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.look::-webkit-scrollbar{display:none}
+.look figure{flex:0 0 72%;max-width:340px;scroll-snap-align:center;position:relative}
+.look img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.look figcaption{position:absolute;bottom:0;right:0;left:0;padding:40px 16px 14px;color:#fff;background:linear-gradient(transparent,rgba(43,33,28,.8));font-size:13px}
+.look figcaption .serif{display:block;font-size:20px;color:var(--gold2)}
+/* promise */
+.prom{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin:56px 18px 0;border:1px solid var(--line)}
+@media(min-width:820px){.prom{grid-template-columns:repeat(4,1fr);max-width:1100px;margin:56px auto 0}}
+.prom div{background:var(--ivory);padding:22px 14px;text-align:center}
+.prom svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.4;margin:0 auto 10px}
+.prom b{display:block;font-size:13.5px}
+.prom span{font-size:11.5px;color:var(--mute);display:block;margin-top:5px;line-height:1.7}
+/* wholesale */
+.ws{margin:56px 0 0;background:linear-gradient(160deg,#2B211C,#3d2f27);color:#fff;padding:54px 22px;position:relative;overflow:hidden}
+.ws:before{content:"ATELIER";position:absolute;font-family:Pf,serif;font-size:120px;color:rgba(184,151,90,.07);top:10px;left:-10px;letter-spacing:10px;direction:ltr}
+.ws .in{position:relative;max-width:760px;margin:0 auto}
+.ws .serif{color:var(--gold2);letter-spacing:5px;font-size:12px}
+.ws h2{font-size:26px;margin:10px 0 12px;font-weight:800}
+.ws p{color:#d9cfc4;font-size:14px;line-height:2}
+.steps{display:grid;gap:12px;margin:26px 0}
+.step{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(217,192,142,.25);padding:16px}
+.step .n{font-family:Pf,serif;font-size:28px;color:var(--gold2);line-height:1;min-width:26px;direction:ltr}
+.step b{display:block;font-size:14.5px}
+.step span{font-size:12.5px;color:#cbbfb2;line-height:1.8}
+/* footer */
+footer{padding:40px 18px 30px;text-align:center;color:var(--mute);font-size:12px;line-height:2}
+footer .serif{font-size:22px;letter-spacing:7px;color:var(--esp)}
+.demo{display:inline-block;margin-top:12px;border:1px dashed var(--gold);color:var(--esp2);padding:6px 14px;font-size:11.5px}
+/* bottom nav */
+.bnav{position:fixed;bottom:0;right:0;left:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:8px 6px calc(8px + env(safe-area-inset-bottom))}
+.bnav a{text-align:center;font-size:11px;color:var(--esp2);text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;font-weight:500}
+.bnav svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.5}
+.bnav a.on{color:var(--gold)}
+/* sheet */
+.ov{position:fixed;inset:0;background:rgba(30,22,18,.5);z-index:60;opacity:0;pointer-events:none;transition:.3s}
+.ov.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;z-index:61;bottom:0;right:0;left:0;max-width:560px;margin:0 auto;background:var(--ivory);transform:translateY(105%);transition:transform .38s cubic-bezier(.2,.8,.2,1);max-height:92vh;overflow:auto}
+.sheet.on{transform:none}
+.sheet .grab{width:42px;height:4px;background:#cdbfae;border-radius:3px;margin:10px auto}
+.sheet .top{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:6px 20px 16px}
+.sheet .top img{aspect-ratio:3/4;object-fit:cover}
+.sheet h3{font-size:18px;font-weight:800;margin-top:4px}
+.sheet .m{font-size:12.5px;color:var(--mute);line-height:1.8;margin-top:6px}
+.sheet .pr{color:var(--gold);font-weight:700;font-size:13px;margin-top:8px}
+.opt{padding:4px 20px 14px}
+.opt h5{font-size:13px;margin-bottom:10px;font-weight:700}
+.opt h5 span{color:var(--mute);font-weight:400}
+.sws{display:flex;flex-wrap:wrap;gap:10px}
+.sws button{width:36px;height:36px;border-radius:50%;border:1px solid rgba(0,0,0,.15);position:relative}
+.sws button.on{outline:2px solid var(--gold);outline-offset:3px}
+.szs{display:flex;flex-wrap:wrap;gap:8px}
+.szs button{min-width:48px;padding:10px 12px;border:1px solid var(--line);background:#fff;font-size:13px}
+.szs button.on{background:var(--esp);color:#fff;border-color:var(--esp)}
+.qty{display:flex;align-items:center;gap:14px}
+.qty button{width:36px;height:36px;border:1px solid var(--line);background:#fff;font-size:18px}
+.mode{display:grid;grid-template-columns:1fr 1fr;margin:0 20px 14px;border:1px solid var(--esp)}
+.mode button{padding:10px;font-size:13px;font-weight:700}
+.mode button.on{background:var(--esp);color:#fff}
+.sheet .act{padding:6px 20px 24px;position:sticky;bottom:0;background:var(--ivory)}
+.sheet .act .btn{width:100%;justify-content:center}
+.note{font-size:11.5px;color:var(--mute);text-align:center;margin-top:10px}
+/* cart drawer */
+.cart{position:fixed;z-index:62;top:0;bottom:0;left:0;width:min(400px,92vw);background:var(--ivory);transform:translateX(-105%);transition:transform .38s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.cart.on{transform:none}
+.cart .ch{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.cart .ch b{font-size:16px}
+.cart .items{flex:1;overflow:auto;padding:10px 20px}
+.ci{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.ci img{aspect-ratio:3/4;object-fit:cover}
+.ci b{font-size:13.5px}
+.ci span{font-size:11.5px;color:var(--mute);display:block;margin-top:4px}
+.ci button{color:var(--mute);font-size:20px}
+.empty{color:var(--mute);text-align:center;padding:60px 0;font-size:13.5px}
+.cart .cf{padding:16px 20px 24px;border-top:1px solid var(--line)}
+.toast{position:fixed;z-index:70;bottom:96px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--esp);color:#fff;padding:12px 20px;font-size:13px;opacity:0;transition:.3s;pointer-events:none;white-space:nowrap}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="ann"><span>ثبت سفارش آنلاین <b>تک و عمده</b></span><span class="dot"></span><span>ارسال به سراسر ایران</span></div>
+
+<header><div class="hd">
+  <div class="icons">
+    <button aria-label="منو"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    <button aria-label="جستجو"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></button>
+  </div>
+  <div class="logo"><div class="serif">AYRA</div><small>THE GOLDEN STANDARD</small></div>
+  <div class="icons">
+    <button aria-label="حساب"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+    <button class="cartb" onclick="openCart()" aria-label="سبد"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><i id="cc">0</i></button>
+  </div>
+</div></header>
+
+<div class="stories" id="stories"></div>
+
+<section class="hero">
+  <img src="vega.jpg" alt="مانتو شلوار وگا آیرا">
+  <div class="cap">
+    <div class="eyebrow">AUTUMN · WINTER 1405</div>
+    <h1>Quiet <em>Luxury</em></h1>
+    <p>مانتو، کت و ست‌هایی که آروم دیده می‌شن و همیشه می‌مونن</p>
+    <a href="#shop" class="btn light">دیدن کالکشن ←</a>
+  </div>
+</section>
+
+<section class="sec reveal">
+  <div class="sh"><span class="serif">SIGNATURE PIECE</span><h2>انتخاب ویژه آتلیه</h2></div>
+</section>
+<div class="spot reveal">
+  <div class="ph"><img id="spImg" src="gol.jpg" alt="کت مجلسی گل ملکه"><div class="sw"><b class="on"></b><b></b></div></div>
+  <div class="tx">
+    <span class="serif">THE QUEEN FLOWER</span>
+    <h3>کت مجلسی گل ملکه</h3>
+    <p>گل‌های دست‌ساز و جواهردوزی روی پارچه مشکی؛ یه تیکه که برای مهمونی‌های پاییز و زمستون، تنها کافیه.</p>
+    <ul><li>جواهردوزی و گل‌های دست‌دوز</li><li>قد کت ۷۵ سانتی‌متر</li><li>سایز ۴۴ تا ۵۲</li></ul>
+    <button class="btn gold" onclick="openP(0)">انتخاب سایز و سفارش</button>
+  </div>
+</div>
+
+<section class="sec" id="shop">
+  <div class="sh reveal"><span class="serif">THE COLLECTION</span><h2>کالکشن آیرا</h2><p>هر مدل با همه رنگ‌ها و سایزها؛ مشتری خودش انتخاب می‌کنه.</p></div>
+</section>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+
+<section class="sec reveal">
+  <div class="sh"><span class="serif">LOOKBOOK</span><h2>آیرا تو خیابون</h2></div>
+</section>
+<div class="look reveal" id="look"></div>
+
+<div class="prom reveal">
+  <div><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.7 7.1 18.2 8 12.7 4 8.8 9.5 8z"/></svg><b>دوخت استاندارد طلایی</b><span>کنترل کیفیت تک‌تک مدل‌ها</span></div>
+  <div><svg viewBox="0 0 24 24"><path d="M4 7h11v9H4zM15 10h3.5L21 13v3h-6"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="17.5" cy="17.5" r="1.6"/></svg><b>ارسال سراسری</b><span>با کد رهگیری</span></div>
+  <div><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg><b>پرداخت امن آنلاین</b><span>درگاه بانکی</span></div>
+  <div><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><b>راهنمای سایز</b><span>تعویض سایز آسون</span></div>
+</div>
+
+<section class="ws" id="omde">
+  <div class="in reveal">
+    <span class="serif">AYRA FOR PARTNERS</span>
+    <h2>همکار عمده آیرا</h2>
+    <p>همکارها جدا وارد می‌شن، قیمت همکاری رو فقط خودشون می‌بینن و سفارش رنگ‌وسایز رو یک‌جا ثبت می‌کنن. بدون رفت‌وبرگشت تو دایرکت.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div><b>ثبت‌نام همکار</b><span>یه بار ثبت‌نام، بعد از تأیید شما فعال می‌شه</span></div></div>
+      <div class="step"><div class="n">02</div><div><b>دیدن قیمت عمده</b><span>قیمت همکاری فقط برای همکارهای تأییدشده نمایش داده می‌شه</span></div></div>
+      <div class="step"><div class="n">03</div><div><b>سفارش سری‌ای</b><span>انتخاب تعداد هر رنگ و سایز، و ثبت یک‌جای سفارش</span></div></div>
+    </div>
+    <button class="btn gold" onclick="toast('در سایت اصلی، فرم ثبت‌نام همکار اینجا باز می‌شه')">درخواست همکاری</button>
+  </div>
+</section>
+
+<footer>
+  <div class="serif">AYRA</div>
+  <div>پیج اینستاگرام: ayraa.mod@</div>
+  <div class="demo">نمونه دمو برای نمایش ایده و کیفیت؛ سایت اصلی با سلیقه آیرا طراحی می‌شه</div>
+</footer>
+
+<nav class="bnav">
+  <a href="#shop" class="on"><svg viewBox="0 0 24 24"><path d="M4 10l1.5-5h13L20 10M4 10v10h16V10M4 10c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 2 3s3-1.3 3-3c0 1.7 1.3 3 3 3s2-1.3 2-3"/></svg>فروشگاه</a>
+  <a href="#omde"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8M12 12v8"/></svg>خرید عمده</a>
+  <a href="#" onclick="toast('در سایت اصلی، مشتری با کد سفارش وضعیت ارسال رو می‌بینه');return false"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M8 11l2 2 4-4M20 20l-3.5-3.5"/></svg>پیگیری سفارش</a>
+  <a href="#" onclick="openCart();return false"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>سبد خرید</a>
+</nav>
+
+<div class="ov" id="ov" onclick="closeAll()"></div>
+<div class="sheet" id="sheet"></div>
+<aside class="cart" id="cart">
+  <div class="ch"><b>سبد خرید</b><button onclick="closeAll()" style="font-size:24px">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="cf"><button class="btn dark" style="width:100%;justify-content:center" onclick="toast('در سایت اصلی: آدرس، پرداخت آنلاین و ثبت نهایی')">ادامه و پرداخت</button><div class="note">نمونه دمو؛ قیمت‌ها در سایت اصلی وارد می‌شن</div></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const C={'مشکی':'#1b1b1b','زرشکی':'#6e1f2a','استخونی':'#e9dfcf','استخوانی':'#e9dfcf','موکا':'#8a6a55','سرمه‌ای':'#1f2a44','قهوه‌ای':'#5a3e2e','طوسی':'#9a9a9a','شکلاتی':'#3d2a22','کرم':'#e6d6b8','پسته‌ای':'#b9c49a'};
+const P=[
+ {n:'کت مجلسی گل ملکه',img:'gol.jpg',cat:'مجلسی',tag:'جدید',meta:'جواهردوزی و گل‌های دست‌ساز · قد کت ۷۵',colors:['مشکی'],sizes:['44','46','48','50','52']},
+ {n:'بارونی چِری',img:'cherry.jpg',cat:'بارونی',tag:'پاییزه',meta:'سوپر سانتانا وارداتی، پشت بندینگ · قد ۷۰',colors:['زرشکی','مشکی','استخونی','موکا','سرمه‌ای'],sizes:['40','42','44','46','48']},
+ {n:'مانتو شلوار وِگا',img:'vega.jpg',cat:'ست',tag:'',meta:'شنل کمردار، یقه انگلیسی · مانتو ۱۱۰',colors:['قهوه‌ای','سرمه‌ای','مشکی','موکا'],sizes:['فری‌سایز']},
+ {n:'ست آوین',img:'avin.jpg',cat:'ست',tag:'',meta:'پارچه بزیاق · مانتو جلو ۶۵، پشت ۷۰',colors:['سرمه‌ای','طوسی','قهوه‌ای','شکلاتی'],sizes:['1','2','3']},
+ {n:'مانتو سلین',img:'selin.jpg',cat:'مانتو',tag:'۵ رنگ',meta:'کمر کش، مناسب استایل روزمره',colors:['استخوانی','مشکی','قهوه‌ای','طوسی','سرمه‌ای'],sizes:['1','2','3']},
+ {n:'ست زیپ‌دار رُما',img:'roma.jpg',cat:'ست',tag:'',meta:'شومیز ۷۰، شلوار ۱۰۰ · مناسب ۳۸ تا ۴۸',colors:['قهوه‌ای','کرم','سرمه‌ای','مشکی'],sizes:['1','2']},
+ {n:'کت‌وشلوار اسپرت',img:'sport.jpg',cat:'ست',tag:'',meta:'پارچه صوفیا زیپی · کت ۷۶، شلوار ۱۰۵',colors:['سرمه‌ای','مشکی','استخونی','کرم','پسته‌ای'],sizes:['1','2']},
+ {n:'بارونی چِری، استخونی',img:'cherry2.jpg',cat:'بارونی',tag:'',meta:'سوپر سانتانا وارداتی · قد ۷۰',colors:['استخونی','مشکی','زرشکی','موکا','سرمه‌ای'],sizes:['40','42','44','46','48']}
+];
+const cats=['همه','مجلسی','بارونی','ست','مانتو'];
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+let cat='همه',cart=[],cur=null,sel={};
+// stories
+const stories=[['جدیدترین','gol2.jpg','همه'],['مجلسی','gol.jpg','مجلسی'],['بارونی','cherry.jpg','بارونی'],['ست‌ها','sport.jpg','ست'],['مانتو','selin.jpg','مانتو'],['پاییزه','cherry2.jpg','بارونی'],['خرید عمده','roma.jpg','omde']];
+document.getElementById('stories').innerHTML=stories.map((s,i)=>`<button class="st" onclick="story('${s[2]}')"><div class="ring"><img src="${s[1]}" alt=""></div><span>${s[0]}</span></button>`).join('');
+function story(c){if(c==='omde'){location.hash='omde';return}setCat(c);document.getElementById('shop').scrollIntoView({behavior:'smooth'})}
+function setCat(c){cat=c;renderChips();renderGrid()}
+function renderChips(){document.getElementById('chips').innerHTML=cats.map(c=>`<button class="chip ${c===cat?'on':''}" onclick="setCat('${c}')">${c}</button>`).join('')}
+function renderGrid(){
+ document.getElementById('grid').innerHTML=P.map((p,i)=>({p,i})).filter(o=>cat==='همه'||o.p.cat===cat).map(({p,i})=>`
+ <div class="card" onclick="openP(${i})"><div class="im"><img loading="lazy" src="${p.img}" alt="${p.n}">${p.tag?`<span class="tag">${p.tag}</span>`:''}<span class="qa"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></div>
+ <h4>${p.n}</h4><div class="m">${p.meta}</div><div class="dots">${p.colors.map(c=>`<i style="background:${C[c]||'#ccc'}" title="${c}"></i>`).join('')}</div><div class="pr">قیمت: در سایت اصلی</div></div>`).join('')
+}
+renderChips();renderGrid();
+// lookbook
+const L=[['sport.jpg','Weekend Tailoring','کت‌وشلوار اسپرت'],['avin.jpg','City Navy','ست آوین'],['selin.jpg','Soft Belted','مانتو سلین'],['roma.jpg','Zip & Go','ست زیپ‌دار رُما']];
+document.getElementById('look').innerHTML=L.map((l,i)=>`<figure onclick="openP(${P.findIndex(p=>p.img===l[0])})"><img loading="lazy" src="${l[0]}" alt="${l[2]}"><figcaption><span class="serif">${l[1]}</span>${l[2]}</figcaption></figure>`).join('');
+// spotlight swap
+let spi=0;setInterval(()=>{spi=1-spi;const im=document.getElementById('spImg');im.style.opacity=0;setTimeout(()=>{im.src=spi?'gol2.jpg':'gol.jpg';im.style.opacity=1},500);document.querySelectorAll('.spot .sw b').forEach((b,k)=>b.classList.toggle('on',k===spi))},4200);
+// sheet
+function openP(i){cur=i;const p=P[i];sel={c:p.colors[0],s:p.sizes.length===1?p.sizes[0]:null,q:1,mode:'تک'};drawSheet();document.getElementById('sheet').classList.add('on');document.getElementById('ov').classList.add('on')}
+function drawSheet(){const p=P[cur];document.getElementById('sheet').innerHTML=`<div class="grab"></div>
+ <div class="top"><img src="${p.img}" alt=""><div><h3>${p.n}</h3><div class="m">${p.meta}</div><div class="pr">${sel.mode==='عمده'?'قیمت همکاری: فقط برای همکار تأییدشده':'قیمت: در سایت اصلی وارد می‌شه'}</div></div></div>
+ <div class="mode"><button class="${sel.mode==='تک'?'on':''}" onclick="sel.mode='تک';sel.q=1;drawSheet()">خرید تکی</button><button class="${sel.mode==='عمده'?'on':''}" onclick="sel.mode='عمده';sel.q=Math.max(sel.q,5);drawSheet()">خرید عمده</button></div>
+ <div class="opt"><h5>رنگ: <span>${sel.c}</span></h5><div class="sws">${p.colors.map(c=>`<button class="${c===sel.c?'on':''}" style="background:${C[c]||'#ccc'}" onclick="sel.c='${c}';drawSheet()" aria-label="${c}"></button>`).join('')}</div></div>
+ <div class="opt"><h5>سایز: <span>${sel.s?fa(sel.s):'انتخاب کنید'}</span></h5><div class="szs">${p.sizes.map(s=>`<button class="${s===sel.s?'on':''}" onclick="sel.s='${s}';drawSheet()">${fa(s)}</button>`).join('')}</div></div>
+ <div class="opt"><h5>تعداد ${sel.mode==='عمده'?'<span>(حداقل ۵)</span>':''}</h5><div class="qty"><button onclick="sel.q=Math.max(sel.mode==='عمده'?5:1,sel.q-1);drawSheet()">−</button><b>${fa(sel.q)}</b><button onclick="sel.q++;drawSheet()">+</button></div></div>
+ <div class="act"><button class="btn dark" onclick="add()">افزودن به سبد</button><div class="note">مشتری خودش رنگ و سایز رو انتخاب می‌کنه؛ سفارش آماده به دست شما می‌رسه.</div></div>`}
+function add(){if(!sel.s){toast('اول سایز رو انتخاب کنید');return}const p=P[cur];cart.push({n:p.n,img:p.img,c:sel.c,s:sel.s,q:sel.q,m:sel.mode});document.getElementById('cc').textContent=fa(cart.reduce((a,b)=>a+b.q,0));closeAll();toast('به سبد خرید اضافه شد ✓')}
+function openCart(){document.getElementById('items').innerHTML=cart.length?cart.map((x,i)=>`<div class="ci"><img src="${x.img}" alt=""><div><b>${x.n}</b><span>${x.c} · سایز ${fa(x.s)} · ${fa(x.q)} عدد · ${x.m}</span></div><button onclick="cart.splice(${i},1);document.getElementById('cc').textContent=fa(cart.reduce((a,b)=>a+b.q,0));openCart()">×</button></div>`).join(''):'<div class="empty">سبد خرید خالیه</div>';document.getElementById('cart').classList.add('on');document.getElementById('ov').classList.add('on')}
+function closeAll(){['sheet','cart','ov'].forEach(id=>document.getElementById(id).classList.remove('on'))}
+let tt;function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),2400)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
